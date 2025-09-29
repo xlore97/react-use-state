@@ -3,22 +3,35 @@ import './App.css'
 import languages from './components/languages'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [selected, setSelected] = useState(null)
 
   return (
-    <>
-      <div className="container">
-        <h1>Learn Web Development</h1>
+    <div className="container">
+      <h1>Learn Web development</h1>
 
-        <div className="buttons">
-
-        </div>
-        <div className="card">
-
-        </div>
+      <div className="buttons">
+        {languages.map(lang => (
+          <button
+            key={lang.id}
+            className={selected?.id === lang.id ? 'btn active' : 'btn'}
+            onClick={() => setSelected(lang)}
+          >
+            {lang.title}
+          </button>
+        ))}
       </div>
 
-    </>
+      <div className="card">
+        {selected ? (
+          <>
+            <h3>{selected.title}</h3>
+            <p>{selected.description}</p>
+          </>
+        ) : (
+          <p className="muted">Nessun linguaggio selezionato</p>
+        )}
+      </div>
+    </div>
   )
 }
 

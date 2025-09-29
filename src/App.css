@@ -1,0 +1,50 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #3b82f6;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn.active {
+  background: #fbbf24;
+  color: #000;
+}
+
+.card {
+  border: 1px solid #ddd;
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.muted {
+  color: #777;
+  font-style: italic;
+  text-align: center;
+}
